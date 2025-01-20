@@ -1,32 +1,26 @@
 {
+  "name": "vitest-auto-stub",
+  "version": "1.0.10",
+  "description": "Automatically create type-safe fully stubbed instances of classes or interfaces.",
+  "keywords": ["vitest", "typescript", "stub", "mock", "auto"],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gregbacchus/vitest-auto-stub.git"
+  },
+  "license": "MIT",
   "author": "Greg Bacchus",
+  "main": "./dist/index.js",
+  "types": "./src/index.ts",
+  "scripts": {
+    "build": "rm -rf dist && npx tsc -p tsconfig.build.json",
+    "prepublishOnly": "npm run build && npm version patch",
+    "postpublish": "git push",
+    "test": "vitest --coverage"
+  },
   "dependencies": {
     "typescript": "^5",
     "vitest": "^3.0.2"
   },
-  "description": "Automatically create type-safe fully stubbed instances of classes or interfaces.",
-  "keywords": [
-    "vitest",
-    "typescript",
-    "stub",
-    "mock",
-    "auto"
-  ],
-  "license": "MIT",
-  "main": "./dist/index.js",
-  "name": "vitest-auto-stub",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gregbacchus/vitest-auto-stub.git"
-  },
-  "scripts": {
-    "test": "vitest --coverage",
-    "build": "rm -rf dist && npx tsc -p tsconfig.build.json",
-    "prepublishOnly": "npm run build && npm version patch",
-    "postpublish": "git push"
-  },
-  "types": "./src/index.ts",
-  "version": "1.0.10",
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
     "@vitest/coverage-v8": "^3.0.2"

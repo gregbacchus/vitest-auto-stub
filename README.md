@@ -1,17 +1,17 @@
-# jest-auto-stub
+# vitest-auto-stub
 
 Automatically create type-safe fully stubbed instances of classes or interfaces.
 
 ## Installation
 
 ```
-npm install jest-auto-stub
+npm install vitest-auto-stub
 ```
 
 ## Usage
 
 ```typescript
-import { reveal, stub } from 'jest-auto-stub';
+import { reveal, stub } from 'vitest-auto-stub';
 
 interface MyInterface {
   foo(): string;
